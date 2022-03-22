@@ -76,16 +76,18 @@ document.getElementById("load1").addEventListener("click", (event) => {
 
 });
 
-var staff_name,place,dob,salary,jdate,sid1;
+var staff_name,place,dob,salary,jdate,sid1,absent,advance;
 
 function upvalues(){
 
 sid1=document.getElementById("sid1").value;
-staff_name=document.getElementById("name1").value;
-place=document.getElementById("place1").value;
-dob=document.getElementById("dob1").value;
-salary=document.getElementById("salary1").value;
-jdate=document.getElementById("jdate1").value;
+staff_name="null";
+place="null"
+dob="null";
+salary="null";
+jdate="null";
+advance="null";
+absent="null";
 
 console.log(sid1,staff_name,place,dob,salary,jdate);
 }
@@ -109,7 +111,17 @@ document.getElementById("delete1").addEventListener("click", (event) => {
 
  console.log(doc.data());
 
-                        db.collection('staffList').doc(docid).delete() .then(() => {
+                        db.collection('staffList').doc(docid).update({
+                            Staffname: staff_name,
+                            Place: place,
+                            DOB:dob,
+                            Salary: salary,
+                            joindate:jdate,
+                            Advance:advance,
+                            Absent:absent
+                                        
+                                    }
+                        ) .then(() => {
 
                                         alert("Data Deleted Successfully")
                 console.log("Document written with ID: ", sid1);
