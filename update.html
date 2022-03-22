@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Staff</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-functions.js"></script>
+    <script type="module" src="update.js"></script>
+    <link rel="icon" href="logo Viva-0.png" type="image/x-icon">
+</head>
+<body>
+  <div class="head">
+    <div class="head-inner">
+      <img class="logo" src="logo Viva-0.png">
+      <div>
+        <h1 class="head1">Swami Vivekanada Matric School</h1>
+        <h1>Salary Generator</h1>
+      </div>
+    </div>
+  </div>
+    <nav class="navbar navbar-expand-lg navbar-light nav-fill w-100">
+        <!--<a class="navbar-brand" href="home.png"></a>-->
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-fill w-100" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="home.html">Home</a>
+            <a class="nav-item nav-link" href="staff.html">Manage Staff</a>
+            <a class="nav-item nav-link" href="attendance.html">Attendance</a>
+            <a class="nav-item nav-link" href="advance.html">Advance Payment</a>
+            <a class="nav-item nav-link" id="logout" href="">Logout</a>
+          </div>
+        </div>
+      </nav>
+      <center>
+    <div class="buttons">
+      <a href="staff.html"><button type="button" style="align-items: center;" class="bt">Add staff</button></a>
+      <a href="update.html"><button type="button" style="align-items: center;" class="bt">Update staff</button></a>
+      <a href="deletestaff.html"><button type="button" style="align-items: center;" class="bt">Remove staff</button></a>
+      <br>
+      <br>
+      <br>
+    </div>
+    <div class="form-group">
+        
+        <label>Staff ID <span style="color: red;">*</span></label><br>
+        <input type="text" class="textboxclass" id="sid1" required><br><br>
+        <label>Name<span style="color: red;">*</span></label><br>
+        <input type="text" class="textboxclass" placeholder="Enter Name" id="name1" required><br><br>
+        <label>Place<span style="color: red;">*</span></label><br>
+        <input type="text" class="textboxclass" placeholder="Enter Place" id="place1" required><br><br>
+        <label>DOB<span style="color: red;">*</span></label><br>
+        <input type="date" class="textboxclass" placeholder="Enter DOB" id="dob1" required><br><br>
+        <label>Salary<span style="color: red;">*</span></label><br>
+        <input type="number" class="textboxclass" placeholder="Enter Salary" id="salary1" required><br><br>
+        <label>Joined Date<span style="color: red;">*</span></label><br>
+        <input type="date" class="textboxclass" placeholder="Enter Joined Date" id="jdate1" required><br><br>
+        <button type="button" class="bt" id="load1">Load</button>
+        <button type="button" class="bt" id="update1">Update</button>
+      </div>
+    </center>
+    
+</body>
+</html>
